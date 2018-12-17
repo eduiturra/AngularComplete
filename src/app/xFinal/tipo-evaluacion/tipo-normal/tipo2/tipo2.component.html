@@ -1,0 +1,39 @@
+<div class="Enlinea actividadBloqueEval">
+  <div id="contentEvaluacion">
+      <div>
+          <img class="Enlinea" src="assets/factoria1/IcoPreguntas.png" alt="Alternate Text" />
+          <h3 (@evalState.done)="animEnd($event)" [@evalState]="state" style="width: 800px;" id="Pregunta" class="Enlinea">{{preguntas.NumPregunta}} {{preguntas.Pregunta}}</h3>
+      </div>
+      <div id="contenidoEvaluacion">
+          <p [@evalState]="state" [ngClass]="{'seleccionado':respuesta === 'a'}"  id="Alt1" class="alternativasActividadEval" (click)="Seleccionado('a')">{{preguntas.Alt1}}</p>
+          <p [@evalState]="state" [ngClass]="{'seleccionado':respuesta === 'b'}" id="Alt2" class="alternativasActividadEval" (click)="Seleccionado('b')">{{preguntas.Alt2}}</p>
+          <p [@evalState]="state" [ngClass]="{'seleccionado':respuesta === 'c'}" id="Alt3" class="alternativasActividadEval" (click)="Seleccionado('c')">{{preguntas.Alt3}}</p>
+          <p [@evalState]="state" [ngClass]="{'seleccionado':respuesta === 'd'}" id="Alt4" class="alternativasActividadEval" (click)="Seleccionado('d')">{{preguntas.Alt4}}</p>
+      </div>
+      <div style="padding-top: 50px;" class="centrarTexto">
+          <img (click)="responder()" id="btnResponder" class="puntero tamanioBtn" src="assets/factoria1/BTN_responder.png" alt="Alternate Text" />
+      </div>
+  </div>
+  <div class="ocularTotal" id="feedbackEvaluacion">
+      <div>
+          <img class="Enlinea" src="assets/factoria1/IcoPreguntas.png" alt="Alternate Text" />
+          <h2 class="Enlinea" style="margin-left: 23px;">Feedback</h2>
+      </div>
+      <div id="feedbackContent">
+          <p>Correctas:<strong id="feedCorrectas"></strong></p>
+          <p>Incorrectas:<strong id="feedIncorrectas"></strong></p>
+          <p>Promedio:<strong id="feedPremedio"></strong></p>
+
+          <img class="tamanioBtn puntero" id="feedbackCerrar" src="assets/factoria1/BTN_cerrar.png" />
+
+      </div>
+  </div>
+
+  <div [hidden]="!mostrarFeedback" id="FeedbackImg">
+    <img id="iconCorrecto" class="ocularTotal iconFeedback" src="assets/factoria1/Ico_visto.png" alt="Alternate Text" />
+    <img id="iconInCorrecto" class="ocularTotal iconFeedback" src="assets/factoria1/Ico_X.png" alt="Alternate Text" />
+  
+    <img (click)="responder()" id="cerrarFeedback" style="margin-top:20px;" class="tamanioBtn puntero" src="assets/factoria1/BTN_cerrar.png" alt="Alternate Text" />
+  </div>
+</div>
+

@@ -1,0 +1,22 @@
+body{
+    background-color: #eff3f6;
+}
+.mat-form-field{
+    display:block;
+}
+
+.mat-card{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 24%;
+}
+
+
+.mat-hint{
+    color: #f44336;
+}
+
+button{
+    margin-top: 20px;
+    width:100%;
+}

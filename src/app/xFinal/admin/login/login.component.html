@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title><h1>Login</h1></mat-card-title>
+    <mat-card-subtitle>Admin</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+      <form [formGroup]="FormLogin" class="example-form">
+        <mat-form-field>
+          <input matInput placeholder="Rut" formControlName="usuarioFormControl" [errorStateMatcher]="matcher">
+          <mat-error *ngIf="FormLogin.get('usuarioFormControl').hasError('required')">
+              Ingresa un usuario
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="password" placeholder="Clave" formControlName="claveFormControl" [errorStateMatcher]="matcher">
+          <mat-error *ngIf="FormLogin.get('claveFormControl').hasError('required')">
+              Ingresa una clave
+            </mat-error>
+            <mat-hint *ngIf="loginIncorrecto">
+                Clave y/o usuario incorrecto
+              </mat-hint>
+        </mat-form-field>
+          <button [disabled]="FormLogin.invalid" (click)="entrar()" color="primary" mat-raised-button>Ingresar</button>
+      </form>
+  </mat-card-content>
+</mat-card>

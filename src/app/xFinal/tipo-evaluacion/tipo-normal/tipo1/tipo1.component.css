@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    background-color: #e9eae8;  
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 auto;
+    width: 1290px;
+}
+
+.actividadBloqueEval{
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    padding-top: 22px;
+    background-color: #00A9E0;
+    color: white;
+    position: relative;
+    height: 522px;
+}
+#contentEvaluacion{
+    width:1000px;
+    margin: 0 auto;
+    text-align: left;
+    
+}
+.alternativasActividadEval{
+    padding: 10px;  
+    width: 950px;
+    cursor:pointer;
+}
+#contenidoEvaluacion{
+    margin-top:30px;
+    width: 1150px;
+    margin-left: 25px
+}
+#Pregunta{
+    vertical-align: top;
+    padding-left: 16px;
+    width: 625px;
+    font-size:20px;
+    text-align: justify;
+}
+.tamanioBtn{
+    width:150px;
+}
+#tituloActividadOut{
+    padding-left: 34px;
+    padding-bottom: 10px;
+    padding-top: 13px;
+}
+
+#tituloInduccion{
+    width:250px;
+}
+.centrarTexto{
+    text-align:center; 
+}
+.Enlinea{
+    display: inline-block;
+    vertical-align: middle;
+}
+.puntero{
+    cursor: pointer;
+}
+.tamanioBtn{
+    width:150px;
+}
+.ocularTotal{
+    display:none;
+}
+#FeedbackImg{
+    width: 853px;
+    height: 400px;
+    background-image: url('assets/factoria1/caja_feedback.png');
+    position: absolute;
+    top: 60px;
+    color:black;
+    left:250px;
+    
+    background-repeat: no-repeat;
+    text-align:center;
+    padding-top:20px;
+}
+
+#textFeedback{
+    padding-top: 81px;
+}
+
+.seleccionado{
+    background-color:violet;
+}
